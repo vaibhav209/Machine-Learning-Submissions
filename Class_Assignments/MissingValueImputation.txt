@@ -1,0 +1,48 @@
+d=read.csv(file.choose())
+attach(d)
+summary(d)
+dim(d)
+is.na(d)
+print(sum(is.na(d)))
+#######IDNO######
+print(sum(is.na(d$IDNO)))
+######BODYFAT####
+print(sum(is.na(d$BODYFAT)))
+boxplot(d$BODYFAT)
+d$BODYFAT[is.na(d$BODYFAT)]<-mean(d$BODYFAT,na.rm = TRUE)
+print(sum(is.na(d$BODYFAT)))
+#####AGE####
+print(sum(is.na(d$AGE)))
+boxplot(d$AGE)
+d$AGE[is.na(d$AGE)]<-median(d$AGE,na.rm = TRUE)
+print(sum(is.na(d$AGE)))
+#####WEIGHT####
+print(sum(is.na(d$WEIGHT)))
+boxplot(d$WEIGHT)
+d$WEIGHT[is.na(d$WEIGHT)]<-mean(d$WEIGHT,na.rm = TRUE)
+print(sum(is.na(d$WEIGHT)))
+#####HEIGHT####
+print(sum(is.na(d$HEIGHT)))
+boxplot(d$HEIGHT)
+d$HEIGHT[is.na(d$HEIGHT)]<-mean(d$HEIGHT,na.rm = TRUE)
+print(sum(is.na(d$hEIGHT)))
+#####NECK####
+print(sum(is.na(d$NECK)))
+boxplot(d$NECK)
+d$NECK[is.na(d$NECK)]<-mean(d$NECK,na.rm = TRUE)
+print(sum(is.na(d$NECK)))
+#####CHEST####
+print(sum(is.na(d$CHEST)))
+boxplot(d$CHEST)
+d$CHEST[is.na(d$CHEST)]<-mean(d$CHEST,na.rm = TRUE)
+print(sum(is.na(d$CHEST)))
+#####ABDOMEN####
+print(sum(is.na(d$ABDOMEN)))
+boxplot(d$ABDOMEN)
+d$ABDOMEN[is.na(d$ABDOMEN)]<-mean(d$ABDOMEN,na.rm = TRUE)
+print(sum(is.na(d$ABDOMEN)))
+#####HIP####
+print(sum(is.na(d$HIP)))
+boxplot(d$HIP)
+d$HIP[is.na(d$HIP)]<-mean(d$HIP,na.rm = TRUE)
+print(sum(is.na(d$HIP)))
